@@ -1,0 +1,255 @@
+/* RESETS AND PADRONS */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    background-color: #141414;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* HEADER STYLES */
+header {
+    width: 100%;
+    height: 68px;
+    z-index: 999;
+    display: flex;
+    padding: 0 4%;
+    transition: .4s;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    position: fixed;
+    top: 0;
+}
+
+header .logo a {
+    margin: 0 20px;
+    color: #E50914;
+    font-size: 1.8rem;
+    font-family: 'Arial Black';
+}
+
+header .primary-navigation ul li {
+    margin: 0 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+header .navigation-tab a {
+    font-weight: 400;
+    color: #e5e5e5;
+}
+
+header .navigation-tab a:hover {
+    color: #ffffff;
+}
+
+header .secondary-navigation {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+}
+
+header .secondary-navigation .nav-element {
+    margin: 0 15px;
+}
+
+header .secondary-navigation .nav-element img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* SECTION BANNER STYLES */
+section.banner {
+    width: 100%;
+    color: #ffffff;
+    max-height: 830px;
+    position: relative;
+}
+
+section.banner .banner-video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+section.banner .banner-video video {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section.banner .banner-info {
+    max-width: 550px;
+    position: absolute;
+    left: 4%;
+    bottom: 10%;
+}
+
+section.banner .banner-info img {
+    width: 450px;
+    display: block;
+    max-width: 100%;
+}
+
+section.banner .banner-info p {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: normal;
+    margin: 10px 0 20px 10px;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+}
+
+section.banner .banner-info a {
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-left: 10px;
+    border-radius: 4px;
+    background-color: rgba(225, 225, 225, 1.0);
+}
+
+section.banner .banner-info a:nth-of-type(2) {
+    color: #ffffff;
+    background-color: rgba(109, 109, 110, 0.7);
+}
+
+section.banner .banner-info a:hover {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.banner .banner-info a > i{
+    margin-right: 10px;
+}
+
+/* CAROUSEL STYLES */
+.carousel {
+    padding: 0 5%;
+    margin-bottom: 60px;
+}
+
+.carousel h2{
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.carousel-box {
+    width: 100%;
+}
+
+.carousel-box .carousel-item {
+    padding-right: 10px;
+}
+
+.carousel-box .carousel-item img {
+    width: 100%;
+    display: block;
+    max-width: 100%;
+    border-radius: 4px;
+    background-color: blue;
+}
+
+/* FOOTER STYLES */
+footer {
+    padding: 0 4%;
+    color: grey;
+    max-width: 980px;
+    margin: 20px auto;
+}
+
+footer .social-links {
+    margin-bottom: 20px;
+}
+
+footer .social-link {
+    color: grey;
+    font-size: 36px;
+    line-height: 36px;
+    margin-right: 15px;
+}
+
+footer .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .links-single {
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+footer .links-single li {
+    margin-bottom: 20px;
+}
+
+footer .links-single li a {
+    color: gray;
+}
+
+footer .links-single a:hover {
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+
+    header .primary-navigation ul li {
+        display: none;
+    }
+
+    .carousel {
+        padding: 0 8%;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .carousel h2{
+        font-size: 1.3rem;
+    }
+
+    section.banner .banner-info {
+        max-width: 300px;
+        bottom: 10%;
+        left: 10%;
+    }
+    
+    section.banner .banner-info img {
+        width: 180px;
+        margin-bottom: 10px;
+    }
+    
+    section.banner .banner-info p {
+        display: none;
+    }
+    
+    section.banner .banner-info a {
+        padding: 10px;
+        font-size: 0.7rem;
+    }
+
+    footer .links {
+        flex-direction: column;
+        align-items: flex-start; 
+   }
+}
